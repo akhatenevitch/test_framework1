@@ -1,0 +1,5 @@
+.git
+venv
+readme.md
+Dockerfile
+.pytest_cache

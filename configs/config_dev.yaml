@@ -1,0 +1,9 @@
+ui:
+  login_url: https://www.saucedemo.com/v1/index.html
+  store_url: https://www.saucedemo.com/v1/inventory.html
+
+api:
+  restful_booker:
+    service_url: https://restful-booker.herokuapp.com
+    username: admin
+    user_password: password123
