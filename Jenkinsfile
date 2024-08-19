@@ -15,7 +15,7 @@ pipeline {
                     steps {
                         script {
                             // Execute Playwright tests for Chromium
-                             sh 'python -m pytest --browser chromium --cucumberjson=cucumber_report_chrome.json'
+                             sh 'python -m pytest -m ui --browser chromium --cucumberjson=cucumber_report_chrome.json'
                              cucumber buildStatus: 'UNSTABLE',
                                 reportTitle: 'Chromium report',
                                 fileIncludePattern: 'cucumber_report_chrome.json',
@@ -34,7 +34,7 @@ pipeline {
                     steps {
                         script {
                             // Execute Playwright tests for Firefox
-                             sh 'python -m pytest --browser firefox --cucumberjson=cucumber_report_firefox.json'
+                             sh 'python -m pytest -m ui --browser firefox --cucumberjson=cucumber_report_firefox.json'
                              cucumber buildStatus: 'UNSTABLE',
                                 reportTitle: 'Firefox report',
                                 fileIncludePattern: 'cucumber_report_firefox.json',
@@ -53,7 +53,7 @@ pipeline {
                     steps {
                         script {
                             // Execute Playwright API tests
-                             sh 'python -m pytest --browser chromium --cucumberjson=cucumber_report_api.json'
+                             sh 'python -m pytest -m api --browser chromium --cucumberjson=cucumber_report_api.json'
                              cucumber buildStatus: 'UNSTABLE',
                                 reportTitle: 'Api report',
                                 fileIncludePattern: 'cucumber_report_api.json',
