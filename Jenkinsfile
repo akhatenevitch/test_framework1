@@ -6,11 +6,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scm
-            }
-        }
-        stage('build') {
-            steps {
-                sh 'pip install -r requirements.txt'
+                sh 'pip install --trusted-host pypi.python.org --trusted-host pypi.org --trusted-host files.pythonhosted.org -r requirements.txt'
             }
         }
         stage('Test') {
