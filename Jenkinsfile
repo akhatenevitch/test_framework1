@@ -57,7 +57,7 @@ pipeline {
                              cucumber buildStatus: 'UNSTABLE',
                                 reportTitle: 'Api report',
                                 fileIncludePattern: 'cucumber_report_api.json',
-                                trendsLimit: 10,
+                                trendsLimit: 10
                              sh 'rm -f cucumber_report_api.json'
                         }
                     }
